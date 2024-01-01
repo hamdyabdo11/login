@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="CSS/all.min.css" />
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/master.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Alegreya&family=Alegreya+Sans:wght@100&family=Open+Sans:wght@300;400;500;600;700&family=PT+Sans+Caption:wght@400;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+  />
+
+</head>  
+<body id="home">
+  <nav class="navbar navbar-expand-lg navbar-dark group">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <div><a class="navbar-brand" href="#">SMART LOGIN</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button></div>
+          
+
+          <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+
+                  <li class="nav-item ms-auto ">
+                    <button id="logout" class="btn btn-outline-success">Logout</button>
+                  </li>
+
+
+              </ul>
+
+          </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container my-5 text-center h-100 d-flex align-items-center">
+      <div class="group m-auto w-75 p-5">
+          <h1 id="userMes"></h1>
+      </div>
+  </div>
+  <!-- <div id="home">
+    <div class="container">
+      <div class="header my-3 d-flex justify-content-between">
+        <div class="logo">
+          SMART LOGIN
+        </div>
+        <button id="logout" class="btn btn-outline-success">Logout</button>
+      </div>
+      <p id="userMes"> Welcome</p>
+    </div>
+  </div> -->
+  <!-- </div> -->
+  <script src="JS/master.js"></script>
+  <script>
+    if(localStorage.getItem("nameUser") !==null){
+        nameUser=JSON.parse(localStorage.getItem("nameUser"));
+      }
+      document.getElementById("userMes").innerHTML=`welcome ${nameUser}`; </script>
+
+</body>
+</html>
